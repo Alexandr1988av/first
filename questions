@@ -1,0 +1,21 @@
+question_and_answers = {
+    'Какая версия Python актуальная?': "3",
+    'Какой номер стандартной кодировки UTF?': "8",
+    'Сколько значений есть у bool?': "2",
+    'Сколько байтов в одном бите?': "8",
+    'Какой формат у чисел с плавающей точкой в Python?': "float"
+    }
+total_answers = 0
+correct_answers = 0
+incorrect_answers = 0
+
+for question, expected_answer in question_and_answers.items():
+    user_answer = input(question + "").lower()
+    if user_answer == expected_answer.lower():
+        print('Верный ответ.')
+        correct_answers += 1
+    else:
+        print('Неверный ответ.')
+        incorrect_answers += 1
+
+print(f'Правильных ответов - {correct_answers}, Неправильных ответов - {incorrect_answers}')        
